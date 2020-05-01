@@ -1,8 +1,5 @@
 class FactSerializer < ActiveModel::Serializer
-  attributes :id, :title, :content, :plant_name
+  attributes :id, :plant_name, :title, :content
 
-  def plant_name
-    "Plant: #{self.plant.name}"
-  end
-
+  has_many :flashcards
 end

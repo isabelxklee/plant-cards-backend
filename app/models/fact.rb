@@ -7,4 +7,8 @@ class Fact < ApplicationRecord
 
     validates :title, length: { maximum: 50 }
     validates :content, length: { maximum: 500 }
+
+    def plant_name
+        "#{self.plant.name}"
+    end
 end
