@@ -1,3 +1,5 @@
 class PlantSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :image
+
+  has_many :facts, :flashcards
 end
