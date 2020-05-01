@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
-  # get 'players/show'
-  # get 'facts/index'
-  # get 'facts/show'
-  # get 'flashcards/index'
-  # get 'flashcards/show'
-  # get 'plants/index'
-  # get 'plants/show'
-
-  ############## plant routes ##############
-  get '/plants', to: 'plants#index', as: 'plants'
-  
+  resources :plants, only: [:index, :show]
+  resources :facts, only: [:index, :show]
+  resources :flashcards, only: [:index, :show]
+  resources :players, only: [:new, :show, :edit, :destroy]
 end
