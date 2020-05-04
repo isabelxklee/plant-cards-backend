@@ -17,4 +17,8 @@ class Flashcard < ApplicationRecord
     def fact_content
       "#{self.fact.content}"
     end
+
+    def emoji_rating
+      "#{self.fact.emoji_rating}"
+    end
 end
