@@ -2,6 +2,8 @@ Plant.destroy_all
 Fact.destroy_all
 Flashcard.destroy_all
 Player.destroy_all
+Question.destroy_all
+Answer.destroy_all
 
 ## plants ##
 snake_plant = Plant.create(name: "Snake Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-laurentii_featured.jpg?v=1586459041")
@@ -62,3 +64,25 @@ Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact4.id)
 ##
 
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact5.id)
+
+## questions ##
+
+q1 = Question.create(content: "What is the name of this plant?")
+Answer.create(content: "Monstera", correct_answer: "true", question_id: q1.id)
+Answer.create(content: "ZZ Plant", correct_answer: "false", question_id: q1.id)
+Answer.create(content: "Snake Plant", correct_answer: "false", question_id: q1.id)
+
+q2 = Question.create(content: "Which level of light exposure does the Snake Plant enjoy?")
+Answer.create(content: "☀️ Enjoys low to medium indirect light", correct_answer: "false", question_id: q2.id)
+Answer.create(content: "🚫 Does not enjoy any light", correct_answer: "false", question_id: q2.id)
+Answer.create(content: "☀️☀️ Enjoys medium to bright indirect light", correct_answer: "true", question_id: q2.id)
+
+q3 = Question.create(content: "Where does the Money Tree originally come from?")
+Answer.create(content: "🌍 Western Africa, from Nigeria down to the Congo", correct_answer: "false", question_id: q3.id)
+Answer.create(content: "🌎 Central and South America", correct_answer: "true", question_id: q3.id)
+Answer.create(content: "🌎 Pacific Northwest of the United States", correct_answer: "false", question_id: q3.id)
+
+q4 = Question.create(content: "What is the ZZ Plant's preferred watering routine?")
+Answer.create(content: "💧💧💧 Water every other day", correct_answer: "false", question_id: q4.id)
+Answer.create(content: "💧💧 Water every 1-2 weeks", correct_answer: "false", question_id: q4.id)
+Answer.create(content: "💧 Water every 2-3 weeks", correct_answer: "true", question_id: q4.id)

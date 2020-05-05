@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :facts, only: [:index, :show]
   resources :flashcards, only: [:index, :show]
   resources :players, only: [:new, :show, :edit, :destroy]
+  resources :questions, only: [:index, :show]
 end
