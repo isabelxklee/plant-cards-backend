@@ -1,24 +1,9 @@
-# README
+Plant Flashcards: Ruby on Rails API
+========================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I made a Ruby on Rails API for the Plant Flashcards game backend. This API consists of 6 domain models with `has_many` and `belongs_to` associations.
 
-Things you may want to cover:
+## Tools
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Rack CORS](https://github.com/cyu/rack-cors): description
+* [ActiveModel::Serializer](https://github.com/rails-api/active_model_serializers): description
