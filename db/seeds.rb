@@ -5,6 +5,9 @@ Player.destroy_all
 Question.destroy_all
 Answer.destroy_all
 
+## players ##
+isabel = Player.create(username: "plant_destroyer", highscore: 500)
+
 ## plants ##
 snake_plant = Plant.create(name: "Snake Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-laurentii_featured.jpg?v=1586459041")
 monstera = Plant.create(name: "Monstera", image: "https://img-new.cgtrader.com/items/723910/7c6a72078f/monstera-3d-model-max-obj-fbx-mtl.jpg")
