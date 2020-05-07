@@ -6,5 +6,4 @@ class Plant < ApplicationRecord
     validates :image, presence: true
 
     validates :name, length: { maximum: 75 }
-    # write validation for image file formats
 end

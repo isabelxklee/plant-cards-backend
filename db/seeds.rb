@@ -6,7 +6,10 @@ Question.destroy_all
 Answer.destroy_all
 
 ## players ##
-isabel = Player.create(username: "plant_destroyer", highscore: 500)
+Player.create(username: "plant_destroyer", highscore: 500)
+Player.create(username: "finkie_cat", highscore: 200)
+Player.create(username: "isabel", highscore: 300)
+Player.create(username: "plant_lov3r", highscore: 100)
 
 ## plants ##
 snake_plant = Plant.create(name: "Snake Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-laurentii_featured.jpg?v=1586459041")
