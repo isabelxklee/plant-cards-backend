@@ -15,7 +15,7 @@ class PlayersController < ApplicationController
 
   def create 
     @player = Player.create(player_params)
-    session[:player_id] = @player.id
+    # session[:player_id] = @player.id
 
     respond_to do |format|
       format.html { redirect_to @players, notice: 'Player was successfully created.' }
@@ -31,14 +31,14 @@ class PlayersController < ApplicationController
   def edit 
   end 
 
-  def update
-    @player.update(player_params)
+  # def update
+  #   @player.update(player_params)
 
-    respond_to do |format|
-        format.html { redirect_to @players, notice: 'Player was successfully updated.' }
-        format.json { render json: @player }
-    end
-  end
+  #   respond_to do |format|
+  #       format.html { redirect_to @players, notice: 'Player was successfully updated.' }
+  #       format.json { render json: @player }
+  #   end
+  # end
 
   def destroy
     @player.destroy
