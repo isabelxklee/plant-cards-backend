@@ -6,20 +6,21 @@ Question.destroy_all
 Answer.destroy_all
 
 ## players ##
-Player.create(username: "plantdestroyer", highscore: 500)
-Player.create(username: "finkiecat", highscore: 200)
-Player.create(username: "isabel", highscore: 300)
-Player.create(username: "plantlov3r", highscore: 100)
+Player.create(username: "plantdestroyer", highscore: 300)
+Player.create(username: "finkiecat", highscore: 150)
+Player.create(username: "isabel", highscore: 50)
+Player.create(username: "plantlov3r", highscore: 250)
 
 ## plants ##
 snake_plant = Plant.create(name: "Snake Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-laurentii_featured.jpg?v=1586459041")
-monstera = Plant.create(name: "Monstera", image: "https://img-new.cgtrader.com/items/723910/7c6a72078f/monstera-3d-model-max-obj-fbx-mtl.jpg")
+monstera = Plant.create(name: "Monstera", image: "https://i.pinimg.com/originals/82/2d/da/822ddae61f6fc113b985723f0ab7e72d.png")
 zz_plant = Plant.create(name: "ZZ Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_zz-plant_hover_terracotta.jpg?v=1586542717")
+money_tree = Plant.create(name: "Money Tree", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_money-tree_hover_black.jpg?v=1583177241")
 calathea = Plant.create(name: "Calathea", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_calathea-medallion_variant_medium_balboa_black_c9faf5e6-c160-49d3-bd23-8dbc875757da.jpg?v=1586900559")
-money_tree = Plant.create(name: "Money Tree Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_money-tree_hover_black.jpg?v=1583177241")
+echeveria = Plant.create(name: "Echeveria Succulent", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_echeveria-agavoides_variant_x-small_grant_black_682bcc8c-4f26-4222-bc78-bee5e8acfa67.jpg?v=1586890918")
+
 # fiddle_leaf = Plant.create(name: "Fiddle Leaf Fig", image: "")
 # spider_plant = Plant.create(name: "Spider Plant", image: "")
-# echeveria = Plant.create(name: "Echeveria Succulent", image: "")
 # peperomia = Plant.create(name: "Peperomia", image: "")
 
 ## monstera facts ##
@@ -38,43 +39,56 @@ snake_plant_fact3 = Fact.create(title: "Pet compatibility", content: "Not pet-fr
 ## zz plant facts ##
 zz_plant_fact1 = Fact.create(title: "Light exposure", content: "Enjoys low to medium indirect light", emoji_rating: "☀️", plant_id: zz_plant.id)
 zz_plant_fact2 = Fact.create(title: "Watering routine", content: "Water every 2-3 weeks", emoji_rating: "💧", plant_id: zz_plant.id)
+zz_plant_fact3 = Fact.create(title: "Pet compatibility", content: "Not pet-friendly", emoji_rating: "🙊", plant_id: zz_plant.id)
 
 ## money tree facts ##
 money_tree_fact1 = Fact.create(title: "Light exposure", content: "Enjoys medium to bright indirect light", emoji_rating: "☀️☀️", plant_id: money_tree.id)
 money_tree_fact2 = Fact.create(title: "Watering routine", content: "Water every 1-2 weeks", emoji_rating: "💧💧", plant_id: money_tree.id)
 money_tree_fact3 = Fact.create(title: "Origin", content: "Native to Central and South America", emoji_rating: "🌎", plant_id: money_tree.id)
+money_tree_fact4 = Fact.create(title: "Pet compatibility", content: "Safe for pets", emoji_rating: "🐒", plant_id: money_tree.id)
+
+## calathea facts ##
+calathea_fact1 = Fact.create(title: "Fun fact", content: "The leaves can be used to craft containers and hold small objects", emoji_rating: "🍃", plant_id: calathea.id)
+calathea_fact2 = Fact.create(title: "Pet compatibility", content: "Safe for pets", emoji_rating: "🐒", plant_id: calathea.id)
+calathea_fact3 = Fact.create(title: "Origin", content: "Native to tropical South America, like the Amazon rainforest", emoji_rating: "🌎", plant_id: calathea.id)
+
+## echeveria facts ##
+echeveria_fact1 = Fact.create(title: "Pet compatibility", content: "Safe for pets", emoji_rating: "🐒", plant_id: echeveria.id)
+echeveria_fact2 = Fact.create(title: "Watering routine", content: "Water every 3-4 weeks", emoji_rating: "🌵", plant_id: echeveria.id)
+echeveria_fact3 = Fact.create(title: "Light exposure", content: "Enjoys bright direct light", emoji_rating: "☀️☀️☀️", plant_id: echeveria.id)
 
 ## flashcards ##
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact1.id)
-Flashcard.create(plant_id: snake_plant.id, fact_id: snake_plant_fact1.id)
-Flashcard.create(plant_id: zz_plant.id, fact_id: zz_plant_fact1.id)
-Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact1.id)
-
-##
-
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact2.id)
-Flashcard.create(plant_id: snake_plant.id, fact_id: snake_plant_fact2.id)
-Flashcard.create(plant_id: zz_plant.id, fact_id: zz_plant_fact2.id)
-Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact2.id)
-
-##
-
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact3.id)
-Flashcard.create(plant_id: snake_plant.id, fact_id: snake_plant_fact3.id)
-Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact3.id)
-
-##
-
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact4.id)
-
-##
-
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact5.id)
+
+Flashcard.create(plant_id: snake_plant.id, fact_id: snake_plant_fact1.id)
+Flashcard.create(plant_id: snake_plant.id, fact_id: snake_plant_fact2.id)
+Flashcard.create(plant_id: snake_plant.id, fact_id: snake_plant_fact3.id)
+
+Flashcard.create(plant_id: zz_plant.id, fact_id: zz_plant_fact1.id)
+Flashcard.create(plant_id: zz_plant.id, fact_id: zz_plant_fact2.id)
+Flashcard.create(plant_id: zz_plant.id, fact_id: zz_plant_fact3.id)
+
+Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact1.id)
+Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact2.id)
+Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact3.id)
+Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact4.id)
+
+Flashcard.create(plant_id: calathea.id, fact_id: calathea_fact1.id)
+Flashcard.create(plant_id: calathea.id, fact_id: calathea_fact2.id)
+Flashcard.create(plant_id: calathea.id, fact_id: calathea_fact3.id)
+
+Flashcard.create(plant_id: echeveria.id, fact_id: echeveria_fact1.id)
+Flashcard.create(plant_id: echeveria.id, fact_id: echeveria_fact2.id)
+Flashcard.create(plant_id: echeveria.id, fact_id: echeveria_fact3.id)
 
 ## questions ##
 
-q1 = Question.create(content: "What is the name of this plant?")
-Answer.create(content: "Monstera", correct_answer: "true", question_id: q1.id)
+q1 = Question.create(content: "Which of these plants is pet-friendly?")
+Answer.create(content: "Money Tree", correct_answer: "true", question_id: q1.id)
 Answer.create(content: "ZZ Plant", correct_answer: "false", question_id: q1.id)
 Answer.create(content: "Snake Plant", correct_answer: "false", question_id: q1.id)
 
