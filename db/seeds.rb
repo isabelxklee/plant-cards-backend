@@ -6,10 +6,10 @@ Question.destroy_all
 Answer.destroy_all
 
 ## players ##
-Player.create(username: "plant_destroyer", highscore: 500)
-Player.create(username: "finkie_cat", highscore: 200)
+Player.create(username: "plantdestroyer", highscore: 500)
+Player.create(username: "finkiecat", highscore: 200)
 Player.create(username: "isabel", highscore: 300)
-Player.create(username: "plant_lov3r", highscore: 100)
+Player.create(username: "plantlov3r", highscore: 100)
 
 ## plants ##
 snake_plant = Plant.create(name: "Snake Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-laurentii_featured.jpg?v=1586459041")
@@ -92,3 +92,13 @@ q4 = Question.create(content: "What is the ZZ Plant's preferred watering routine
 Answer.create(content: "💧💧💧 Water every other day", correct_answer: "false", question_id: q4.id)
 Answer.create(content: "💧💧 Water every 1-2 weeks", correct_answer: "false", question_id: q4.id)
 Answer.create(content: "💧 Water every 2-3 weeks", correct_answer: "true", question_id: q4.id)
+
+q5 = Question.create(content: "What is the Monstera Plant's nickname?")
+Answer.create(content: "Swiss Cheese Plant", correct_answer: "true", question_id: q5.id)
+Answer.create(content: "Instagram Plant", correct_answer: "false", question_id: q5.id)
+Answer.create(content: "Mexican Fruit Plant", correct_answer: "false", question_id: q5.id)
+
+q6 = Question.create(content: "Is the Snake Plant pet-friendly?")
+Answer.create(content: "👍 Yes", correct_answer: "false", question_id: q6.id)
+Answer.create(content: "👎 No", correct_answer: "true", question_id: q6.id)
+Answer.create(content: "👀 Sometimes???", correct_answer: "false", question_id: q6.id)
