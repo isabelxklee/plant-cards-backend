@@ -5,7 +5,7 @@ class PlayersController < ApplicationController
   end
 
   def show
-    @player = Player.find(params[:id])
+    set_player
     render json: @player
   end
 
@@ -13,16 +13,9 @@ class PlayersController < ApplicationController
     @player = Player.new
   end 
 
-  def create 
+  def create
     @player = Player.create(player_params)
-    # session[:player_id] = @player.id
-
-    respond_to do |format|
-      format.html { redirect_to @players, notice: 'Player was successfully created.' }
-      format.json { render json: @player }
-      # format.json { render :show, status: :created, location: @player }
-    end
-
+    render json: @player
   end 
 
   def show
@@ -31,15 +24,12 @@ class PlayersController < ApplicationController
   end
 
   def edit 
+    set_player
   end 
 
   def update
     @player.update(player_params)
-
-    respond_to do |format|
-        format.html { redirect_to @players, notice: 'Player was successfully updated.' }
-        format.json { render json: @player }
-    end
+    render json: @player
   end
 
   def destroy
