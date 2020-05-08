@@ -7,9 +7,9 @@ Answer.destroy_all
 
 ## players ##
 Player.create(username: "plantdestroyer", highscore: 300)
-Player.create(username: "finkiecat", highscore: 150)
-Player.create(username: "isabel", highscore: 50)
-Player.create(username: "plantlov3r", highscore: 250)
+# Player.create(username: "finkiecat", highscore: 150)
+# Player.create(username: "isabel", highscore: 50)
+# Player.create(username: "plantlov3r", highscore: 250)
 
 ## plants ##
 snake_plant = Plant.create(name: "Snake Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-laurentii_featured.jpg?v=1586459041")
@@ -58,9 +58,9 @@ echeveria_fact2 = Fact.create(title: "Watering routine", content: "Water every 3
 echeveria_fact3 = Fact.create(title: "Light exposure", content: "Enjoys bright direct light", emoji_rating: "☀️☀️☀️", plant_id: echeveria.id)
 
 ## flashcards ##
-Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact1.id)
+# Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact1.id)
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact2.id)
-Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact3.id)
+# Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact3.id)
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact4.id)
 Flashcard.create(plant_id: monstera.id, fact_id: monstera_fact5.id)
 
@@ -73,7 +73,7 @@ Flashcard.create(plant_id: zz_plant.id, fact_id: zz_plant_fact2.id)
 Flashcard.create(plant_id: zz_plant.id, fact_id: zz_plant_fact3.id)
 
 Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact1.id)
-Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact2.id)
+# Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact2.id)
 Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact3.id)
 Flashcard.create(plant_id: money_tree.id, fact_id: money_tree_fact4.id)
 
@@ -116,3 +116,13 @@ q6 = Question.create(content: "Is the Snake Plant pet-friendly?")
 Answer.create(content: "👍 Yes", correct_answer: "false", question_id: q6.id)
 Answer.create(content: "👎 No", correct_answer: "true", question_id: q6.id)
 Answer.create(content: "👀 Sometimes???", correct_answer: "false", question_id: q6.id)
+
+q7 = Question.create(content: "How often should you water an Echeveria Succulent?")
+Answer.create(content: "🌵 Water every 3-4 weeks", correct_answer: "true", question_id: q7.id)
+Answer.create(content: "💧💧 Water every 1-2 weeks", correct_answer: "false", question_id: q7.id)
+Answer.create(content: "💧 Water every 2-3 weeks", correct_answer: "false", question_id: q7.id)
+
+q8 = Question.create(content: "Where is the Calathea originally from?")
+Answer.create(content: "🌍 Western Africa, from Nigeria down to the Congo", correct_answer: "false", question_id: q8.id)
+Answer.create(content: "🌎 Native to tropical South America, like the Amazon rainforest", correct_answer: "true", question_id: q8.id)
+Answer.create(content: "🌏 Southeast Asia, from Vietname to Thailand", correct_answer: "false", question_id: q8.id)
