@@ -28,17 +28,15 @@ class PlayersController < ApplicationController
   end 
 
   def update
+    set_player
     @player.update(player_params)
     render json: @player
   end
 
   def destroy
+    set_player
     @player.destroy
-
-    respond_to do |format|
-      format.html { redirect_to players_url, notice: 'Player was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    render json: @players
   end
 
   private
