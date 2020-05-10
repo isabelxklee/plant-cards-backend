@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['HEROKU_POSTGRESQL_GREEN_URL'] %>
   database: backendAPI_production
-  username: backendAPI
-  password: <%= ENV['BACKENDAPI_DATABASE_PASSWORD'] %>
+  # username: backendAPI
+  # password: <%= ENV['BACKENDAPI_DATABASE_PASSWORD'] %>
