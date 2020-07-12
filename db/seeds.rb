@@ -7,14 +7,14 @@ Answer.destroy_all
 
 ## players ##
 Player.create(username: "plantdestroyer", highscore: 300)
-# Player.create(username: "finkiecat", highscore: 150)
-# Player.create(username: "isabel", highscore: 50)
-# Player.create(username: "plantlov3r", highscore: 250)
+Player.create(username: "finkiecat", highscore: 150)
+Player.create(username: "isabel", highscore: 50)
+Player.create(username: "plantlov3r", highscore: 250)
 
 ## plants ##
-snake_plant = Plant.create(name: "Snake Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-laurentii_featured.jpg?v=1586459041")
+snake_plant = Plant.create(name: "Snake Plant", image: "https://i.imgur.com/oCgg11o.png")
 monstera = Plant.create(name: "Monstera", image: "https://i.pinimg.com/originals/82/2d/da/822ddae61f6fc113b985723f0ab7e72d.png")
-zz_plant = Plant.create(name: "ZZ Plant", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_zz-plant_hover_terracotta.jpg?v=1586542717")
+zz_plant = Plant.create(name: "ZZ Plant", image: "https://imgur.com/B50JxUr.png")
 money_tree = Plant.create(name: "Money Tree", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_money-tree_hover_black.jpg?v=1583177241")
 calathea = Plant.create(name: "Calathea", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_calathea-medallion_variant_medium_balboa_black_c9faf5e6-c160-49d3-bd23-8dbc875757da.jpg?v=1586900559")
 echeveria = Plant.create(name: "Echeveria Succulent", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_echeveria-agavoides_variant_x-small_grant_black_682bcc8c-4f26-4222-bc78-bee5e8acfa67.jpg?v=1586890918")
