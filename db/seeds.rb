@@ -1,15 +1,15 @@
 Plant.destroy_all
 Fact.destroy_all
 Flashcard.destroy_all
-Player.destroy_all
+# Player.destroy_all
 Question.destroy_all
 Answer.destroy_all
 
 ## players ##
-Player.create(username: "plantdestroyer", highscore: 300)
-Player.create(username: "finkiecat", highscore: 150)
-Player.create(username: "isabel", highscore: 50)
-Player.create(username: "plantlov3r", highscore: 250)
+# Player.create(username: "plantdestroyer", highscore: 300)
+# Player.create(username: "finkiecat", highscore: 150)
+# Player.create(username: "isabel", highscore: 50)
+# Player.create(username: "plantlov3r", highscore: 250)
 
 ## plants ##
 snake_plant = Plant.create(name: "Snake Plant", image: "https://i.imgur.com/oCgg11o.png")
