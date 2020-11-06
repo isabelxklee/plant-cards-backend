@@ -1,23 +1,23 @@
 Plant.destroy_all
 Fact.destroy_all
 Flashcard.destroy_all
-# Player.destroy_all
+Player.destroy_all
 Question.destroy_all
 Answer.destroy_all
 
 ## players ##
-# Player.create(username: "plantdestroyer", highscore: 300)
-# Player.create(username: "finkiecat", highscore: 150)
-# Player.create(username: "isabel", highscore: 50)
-# Player.create(username: "plantlov3r", highscore: 250)
+Player.create(username: "plantdestroyer", highscore: 300)
+Player.create(username: "finkiecat", highscore: 150)
+Player.create(username: "isabel", highscore: 50)
+Player.create(username: "plantlov3r", highscore: 250)
 
 ## plants ##
 snake_plant = Plant.create(name: "Snake Plant", image: "https://i.imgur.com/oCgg11o.png")
 monstera = Plant.create(name: "Monstera", image: "https://i.pinimg.com/originals/82/2d/da/822ddae61f6fc113b985723f0ab7e72d.png")
 zz_plant = Plant.create(name: "ZZ Plant", image: "https://imgur.com/B50JxUr.png")
-money_tree = Plant.create(name: "Money Tree", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_money-tree_hover_black.jpg?v=1583177241")
-calathea = Plant.create(name: "Calathea", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_calathea-medallion_variant_medium_balboa_black_c9faf5e6-c160-49d3-bd23-8dbc875757da.jpg?v=1586900559")
-echeveria = Plant.create(name: "Echeveria Succulent", image: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_echeveria-agavoides_variant_x-small_grant_black_682bcc8c-4f26-4222-bc78-bee5e8acfa67.jpg?v=1586890918")
+money_tree = Plant.create(name: "Money Tree", image: "https://i.imgur.com/TEerV5y.png")
+calathea = Plant.create(name: "Calathea", image: "https://i.imgur.com/cZzuNjQ.png")
+echeveria = Plant.create(name: "Echeveria Succulent", image: "https://i.imgur.com/e5hiPhJ.png")
 
 # fiddle_leaf = Plant.create(name: "Fiddle Leaf Fig", image: "")
 # spider_plant = Plant.create(name: "Spider Plant", image: "")
@@ -126,3 +126,5 @@ q8 = Question.create(content: "Where is the Calathea originally from?")
 Answer.create(content: "🌍 Western Africa, from Nigeria down to the Congo", correct_answer: "false", question_id: q8.id)
 Answer.create(content: "🌎 Native to tropical South America, like the Amazon rainforest", correct_answer: "true", question_id: q8.id)
 Answer.create(content: "🌏 Southeast Asia, from Vietname to Thailand", correct_answer: "false", question_id: q8.id)
+
+puts "seeding done! 🌱"
